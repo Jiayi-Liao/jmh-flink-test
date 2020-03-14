@@ -84,8 +84,7 @@ public class MyBenchmark {
                 .map(SchedulingExecutionVertex::getId)
                 .collect(Collectors.toSet());
     }
-
-    // 5000 * 5000 blocking
+    
     public static Set<? extends Set<? extends SchedulingExecutionVertex<?, ?>>> buildDistinctRegions(int parallelism) {
         return PipelinedRegionComputeUtil.computePipelinedRegions(buildComplexTopology(parallelism));
     }
